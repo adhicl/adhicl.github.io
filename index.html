@@ -1,219 +1,149 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YourFavoriteGameStudio - Game & App Developer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #111827; /* Dark blue-gray background */
-            color: #E5E7EB; /* Light gray text */
-        }
-        .hero-bg {
-            background: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 1)), url('https://placehold.co/1920x1080/1a202c/ffffff?text=Game+Dev+Montage') no-repeat center center;
-            background-size: cover;
-        }
-        .glass-effect {
-            background: rgba(31, 41, 55, 0.5);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .section-title {
-            @apply text-4xl font-bold text-center mb-12 relative;
-        }
-        .section-title::after {
-            content: '';
-            @apply block w-20 h-1 bg-indigo-500 mx-auto mt-4 rounded-full;
-        }
-        .project-card:hover .project-overlay {
-            opacity: 1;
-        }
-        .skill-badge {
-            @apply bg-gray-700 text-indigo-300 text-sm font-semibold px-4 py-2 rounded-full transition-transform transform hover:scale-110 hover:bg-indigo-600 hover:text-white;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YourFavoriteGameStudio</title>
+<meta name="description" content="Crafting your next favorite adventure — indie games from YourFavoriteGameStudio.">
+<meta name="theme-color" content="#2e418c">
+
+<meta property="og:title" content="YourFavoriteGameStudio">
+<meta property="og:description" content="Crafting your next favorite adventure">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/hero-banner.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="YourFavoriteGameStudio">
+<meta name="twitter:description" content="Adventure meets intuition">
+<meta name="twitter:image" content="assets/hero-banner.png">
+
+<link rel="icon" href="assets/logo.png">
+<link rel="apple-touch-icon" href="assets/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Header & Navigation -->
-    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-700">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-white tracking-wider">YourFavorite<span class="text-indigo-400">GameStudio</span></a>
-            <div class="hidden md:flex space-x-8">
-                <a href="#about" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">About</a>
-                <a href="#projects" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Projects</a>
-                <a href="#skills" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Skills</a>
-                <a href="#contact" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Contact</a>
-            </div>
-            <button id="mobile-menu-button" class="md:hidden text-gray-300 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-            <a href="#about" class="block py-2 text-gray-300 hover:text-indigo-400">About</a>
-            <a href="#projects" class="block py-2 text-gray-300 hover:text-indigo-400">Projects</a>
-            <a href="#skills" class="block py-2 text-gray-300 hover:text-indigo-400">Skills</a>
-            <a href="#contact" class="block py-2 text-gray-300 hover:text-indigo-400">Contact</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand">
+      <img src="assets/logo.png" alt="YourFavoriteGameStudio logo" class="brand-logo">
+      <span>YourFavoriteGameStudio</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="siteNav">
+      <a href="#top">Home</a>
+      <a href="#games">Games</a>
+      <a href="#connect">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section id="top" class="hero">
+    <a href="#games" class="hero-banner-link" aria-label="Adventure Meets Intuition — Crafting your next favorite adventure. Explore Games.">
+      <img src="assets/hero-banner.png" alt="Adventure Meets Intuition — Crafting your next favorite adventure" class="hero-banner-img">
+    </a>
+  </section>
+
+  <section id="about" class="section">
+    <div class="wrap">
+      <h2 class="section-heading">About us</h2>
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>Our Mission</h3>
+          <p>At YourFavoriteGamesStudio, we craft imaginative, genre-blending games that spark curiosity, challenge convention, and invite players into worlds they want to return to. We believe in playful experimentation, accessible design, and storytelling that resonates&mdash;whether you're solving puzzles, battling monsters, or building your own legend.</p>
         </div>
-    </header>
-
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero-bg min-h-screen flex items-center justify-center text-center">
-            <div class="container mx-auto px-6">
-                <h1 class="text-5xl md:text-7xl font-black text-white uppercase tracking-wider mb-4">Crafting Worlds,</h1>
-                <h2 class="text-3xl md:text-5xl font-bold text-indigo-300 mb-8">One Line of Code at a Time.</h2>
-                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10">A passionate Game Developer and Mobile App Creator bringing innovative ideas to life.</p>
-                <a href="#projects" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-indigo-700 transition-transform transform hover:scale-105 duration-300">View My Work</a>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="py-20 bg-gray-900">
-            <div class="container mx-auto px-6">
-                <h2 class="section-title">About Me</h2>
-                <div class="flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/3">
-                        <img src="https://placehold.co/400x400/374151/E5E7EB?text=Dev+Photo" alt="Developer Portrait" class="rounded-full shadow-lg border-4 border-gray-700 w-64 h-64 md:w-full md:h-auto object-cover mx-auto">
-                    </div>
-                    <div class="md:w-2/3 text-lg text-gray-300">
-                        <p class="mb-4">
-                            Hello! I'm a dedicated and creative developer with a deep passion for both game development and mobile application design. My journey in the tech world has been driven by a desire to build immersive experiences that captivate and entertain users.
-                        </p>
-                        <p class="mb-4">
-                            From designing complex game mechanics in Unity to building sleek, user-friendly mobile apps, I thrive on challenges and am always eager to learn new technologies. My goal is to merge technical skill with artistic vision to create products that are not only functional but also memorable.
-                        </p>
-                        <p>
-                            When I'm not coding, you can find me exploring the latest indie games, brainstorming new app ideas, or contributing to open-source projects. Let's build something amazing together!
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="section-title">My Projects</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-
-                    <!-- Project Card 1: NumberTower -->
-                    <div class="project-card bg-gray-800 rounded-lg shadow-2xl overflow-hidden group">
-                        <div class="relative">
-                            <img src="https://placehold.co/600x400/1f2937/a78bfa?text=NumberTower" alt="NumberTower Game" class="w-full h-64 object-cover">
-                            <div class="project-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                <div class="text-center p-4">
-                                    <h3 class="text-2xl font-bold text-white mb-2">NumberTower</h3>
-                                    <p class="text-gray-300">A strategic tower defense game where numbers are your weapon. Published on Steam.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold text-indigo-400 mb-3">NumberTower</h3>
-                            <p class="text-gray-400 mb-4">A challenging and addictive tower defense game with a mathematical twist. Strategize, build, and defend against waves of enemies in this unique title available on Steam.</p>
-                            <a href="#" class="inline-block bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300">
-                                View on Steam
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 2: Neko Match Blast -->
-                    <div class="project-card bg-gray-800 rounded-lg shadow-2xl overflow-hidden group">
-                        <div class="relative">
-                            <img src="https://placehold.co/600x400/1f2937/f472b6?text=Neko+Match+Blast" alt="Neko Match Blast Game" class="w-full h-64 object-cover">
-                            <div class="project-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                <div class="text-center p-4">
-                                    <h3 class="text-2xl font-bold text-white mb-2">Neko Match Blast</h3>
-                                    <p class="text-gray-300">A vibrant and explosive match-3 puzzle game for Android.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold text-indigo-400 mb-3">Neko Match Blast</h3>
-                            <p class="text-gray-400 mb-4">Dive into a colorful world of cute cats and explosive puzzles! This match-3 adventure for Android offers hundreds of levels, powerful boosters, and endless fun.</p>
-                            <a href="#" class="inline-block bg-green-600 text-white font-semibold py-2 px-6 rounded-lg hover:bg-green-700 transition-colors duration-300">
-                                Get on Google Play
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="py-20 bg-gray-900">
-            <div class="container mx-auto px-6">
-                <h2 class="section-title">Skills & Expertise</h2>
-                <div class="max-w-4xl mx-auto flex flex-wrap justify-center items-center gap-4">
-                    <span class="skill-badge">Unity</span>
-                    <span class="skill-badge">C#</span>
-                    <span class="skill-badge">Game Design</span>
-                    <span class="skill-badge">Android Development</span>
-                    <span class="skill-badge">Java</span>
-                    <span class="skill-badge">Kotlin</span>
-                    <span class="skill-badge">iOS Development</span>
-                    <span class="skill-badge">Swift</span>
-                    <span class="skill-badge">Blender</span>
-                    <span class="skill-badge">Photoshop</span>
-                    <span class="skill-badge">Git & Version Control</span>
-                    <span class="skill-badge">Agile/Scrum</span>
-                    <span class="skill-badge">UI/UX Design</span>
-                    <span class="skill-badge">Firebase</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="max-w-2xl mx-auto text-center">
-                    <p class="text-lg text-gray-400 mb-8">
-                        I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious vision. Feel free to reach out!
-                    </p>
-                    <a href="mailto:contact@yourfavoritegamestudio.com" class="bg-indigo-600 text-white font-bold py-4 px-10 rounded-full text-xl hover:bg-indigo-700 transition-transform transform hover:scale-105 duration-300">
-                        Say Hello
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 border-t border-gray-700 py-6">
-        <div class="container mx-auto px-6 text-center text-gray-500">
-            <p>&copy; 2024 YourFavoriteGameStudio. All Rights Reserved.</p>
+        <div class="about-card">
+          <h3>Our Vision</h3>
+          <p>To become a trusted indie studio known for reinventing familiar genres with fresh mechanics and heartfelt creativity. We aim to build a global community of players and creators who celebrate progress, feedback, and the joy of discovery&mdash;one game at a time.</p>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+  <section id="games" class="section section-alt">
+    <div class="wrap">
+      <h2 class="section-heading">Our Games</h2>
+      <div class="games-grid">
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+        <article class="game-card">
+          <div class="video-frame">
+            <iframe src="https://www.youtube-nocookie.com/embed/Nq4bdHugwN8" title="Dungeon Match Quest trailer" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <h3>Dungeon Match Quest</h3>
+          <p>Dive into a thrilling fusion of match-3 strategy, roguelite progression, and fantasy combat.</p>
+          <a href="https://adhicl.itch.io/dungeon-match-quest" class="btn btn-secondary" target="_blank" rel="noopener">Check Demo</a>
+        </article>
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                // Hide mobile menu on click
-                if (!mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                }
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+        <article class="game-card">
+          <div class="video-frame">
+            <iframe src="https://www.youtube-nocookie.com/embed/bv12i8i27Yo" title="Neko Match Blast trailer" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <h3>Neko Match Blast</h3>
+          <p>Get ready for <strong>Neko Match Blast</strong>, the puzzle game featuring adorable kittens.</p>
+          <a href="https://play.google.com/store/apps/details?id=com.yourfavoritegame.nekomatchblast" class="btn btn-secondary" target="_blank" rel="noopener">Play Store</a>
+        </article>
+
+        <article class="game-card">
+          <div class="video-frame">
+            <iframe src="https://www.youtube-nocookie.com/embed/21ruUHxhJQU" title="Number Tower trailer" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <h3>Number Tower</h3>
+          <p><strong>Number Tower</strong> is a casual puzzle game that uses math equations, inspired by those old fake game ads on the internet.</p>
+          <a href="https://store.steampowered.com/app/3109810/Number_Tower/" class="btn btn-secondary" target="_blank" rel="noopener">Steam</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="connect" class="section">
+    <div class="wrap">
+      <h2 class="section-heading">Connect with us</h2>
+      <div class="social-links">
+        <a href="https://www.facebook.com/acl.lius" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.9h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94Z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/adhicl/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.22.6 1.77 1.16.5.5.9 1.11 1.16 1.77.25.64.42 1.37.47 2.43.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.16 1.77c-.5.5-1.11.9-1.77 1.16-.64.25-1.37.42-2.43.47-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.77-1.16 4.9 4.9 0 0 1-1.16-1.77c-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.22 1.16-1.77.5-.5 1.11-.9 1.77-1.16.64-.25 1.37-.42 2.43-.47C8.94 2.01 9.28 2 12 2Zm0 1.8c-2.67 0-2.99.01-4.04.06-.87.04-1.34.18-1.65.3-.42.16-.71.36-1.02.67-.31.31-.5.6-.67 1.02-.12.31-.26.78-.3 1.65C4.27 8.5 4.26 8.83 4.26 11.5v1c0 2.67.01 2.99.06 4.04.04.87.18 1.34.3 1.65.16.42.36.71.67 1.02.31.31.6.5 1.02.67.31.12.78.26 1.65.3 1.05.05 1.37.06 4.04.06s2.99-.01 4.04-.06c.87-.04 1.34-.18 1.65-.3.42-.16.71-.36 1.02-.67.31-.31.5-.6.67-1.02.12-.31.26-.78.3-1.65.05-1.05.06-1.37.06-4.04v-1c0-2.67-.01-2.99-.06-4.04-.04-.87-.18-1.34-.3-1.65a2.8 2.8 0 0 0-.67-1.02 2.8 2.8 0 0 0-1.02-.67c-.31-.12-.78-.26-1.65-.3C14.99 3.81 14.67 3.8 12 3.8Zm0 3.44a4.76 4.76 0 1 1 0 9.52 4.76 4.76 0 0 1 0-9.52Zm0 1.8a2.96 2.96 0 1 0 0 5.92 2.96 2.96 0 0 0 0-5.92Zm4.95-2a1.11 1.11 0 1 1 0 2.23 1.11 1.11 0 0 1 0-2.23Z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/adhicl" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.64h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.6c0-1.34-.02-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96V21h-4V9Z"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@acl0956" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M16.6 2h-3.2v13.4a2.9 2.9 0 1 1-2.06-2.78V9.3a6.1 6.1 0 1 0 5.26 6.05V8.35a7.6 7.6 0 0 0 4.4 1.4V6.55a4.4 4.4 0 0 1-4.4-4.4V2Z"/></svg>
+        </a>
+        <a href="https://www.x.com/ACL_dev" target="_blank" rel="noopener" aria-label="X (Twitter)">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M18.24 2h3.06l-6.69 7.65L22.5 22h-6.16l-4.83-6.32L5.98 22H2.92l7.16-8.19L2 2h6.32l4.37 5.78L18.24 2Zm-1.08 18.17h1.7L7.9 3.74H6.08L17.16 20.17Z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@adhichristantolius9142" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.56A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14C4.5 20.5 12 20.5 12 20.5s7.5 0 9.38-.56a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.27 3.6-6.27 3.6Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; <span id="year"></span> YourFavoriteGameStudio &mdash; All rights reserved.</p>
+    <p class="footer-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-use.html">Terms of Use</a>
+    </p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
