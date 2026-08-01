@@ -181,6 +181,19 @@ img { max-width: 100%; display: block; }
 }
 
 .about-card p { color: var(--color-text-muted); }
+.about-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+/* Game subpages (e.g. /jajanan/) */
+.game-intro {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.game-intro h1 { margin-top: 12px; }
+.game-intro .tagline { font-size: 1.1rem; }
 
 /* Games */
 .games-grid {
